@@ -1,3 +1,7 @@
+* { 
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     margin:0;
@@ -32,10 +36,12 @@ nav ul li:hover {
 nav ul a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 
+
+/* ********************************** */
 /* Simple Menu */
 .simple ul {
     display: flex;
@@ -53,4 +59,36 @@ nav ul a {
     }
 }
 
- 
+
+/* Menu with Icons */
+.icons ul li a {
+    display: flex;
+    justify-content: center;
+}
+
+.icons .icon {
+    flex: 0 1 1.8rem;
+}
+
+.icons .text span {
+    font-size: .7rem;
+    display: block;
+    margin-top: .5rem;
+}
+
+@media screen and (min-width: 480px) {
+    .icons ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .icons ul li {
+        flex: 0 1 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .icons ul li {
+        flex: 1;
+    }
+}
